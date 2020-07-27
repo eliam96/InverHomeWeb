@@ -1,0 +1,190 @@
+
+/* variables */
+:root{
+    --p-color:#095696;
+    --s-color: #EBB952;
+    --t-color: #2684D1;
+    --bg-color: #FFFFFF;
+}
+
+/* Estilos generales */
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px; /*16px=1rem */
+}
+li{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+/* Fin */
+/* Header y navegación */
+.header{
+    margin: 0.625rem auto;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 90%;
+    height: 100px;  
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(236, 236, 236, 0.678);
+}
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 9.375rem;
+    height: auto;
+}
+.menu{
+    display: flex;
+    width: 80%;
+    align-items: center;
+}
+.item-menu{
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.item-menu a{
+    color: var(--p-color);
+    font-size: 1rem;
+
+}
+.item-menu a::after{
+    display: block;
+    content: "";
+    background-color: var(--s-color);
+    width: 0;
+    height: 2px;
+    transition: all .5s;
+
+}
+.menu a:hover{
+    color: var(--s-color); 
+}
+
+.menu a:hover::after{
+    width: 100%;
+}
+
+/* Sección portada principal */
+.intro{
+    margin: 0 auto;
+    background: url(../imgs/bghouse.jpg) center/cover no-repeat;
+    width: 100%;
+    height: 37.5rem;
+    position: relative;
+}
+
+.intro .tel{
+    align-items: center;
+    /*                                       repet  position X Y          / size  W H*/
+    /* background: url(../icons/icontel.svg) no-repeat 1.875rem 0.9375rem / 2.50rem 2.50rem; */
+    background-color: var(--t-color);
+    color: var(--bg-color);
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 4.375rem;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 3.125rem;
+    width: 17rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0.625rem;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    width: 35%;
+    height: 23.125rem;
+    color: var(--bg-color);
+    bottom: -7.1875rem;
+    left: 0.625rem;
+}
+
+.card__lema{
+    font-size: 2.5rem;
+    margin: 0;
+    width: 100%;
+    height: 70%;
+    background: var(--p-color);
+    text-transform: uppercase;
+    padding: 2.1875rem;
+}
+
+.card__lema::after{
+    content: "";
+    background: var(--bg-color);
+    display:block;
+    width: 100%;
+    height: 0.1875rem;
+
+}
+.card__description{
+    margin: 0;
+    background: var(--t-color);
+    width: 100%;
+    height: 30%;
+    padding: 0.625rem 2.1875rem;
+}
+
+/* Social Bar */
+.socialbar{
+    position: fixed;
+    background: var(--t-color);
+    width: 3.125rem;
+    height: 13.125rem;
+    right: 0;
+    bottom: 9.375rem;
+
+}
+.socialbar__icon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.socialbar__icon--social{
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    width: 100%;
+    height: 25%;
+    border-bottom: solid rgba(94, 90, 90, 0.678);
+}
+
+.socialbar__icon img{
+    width: 2.5rem;
+}
+.prueba {
+    height: 300vh;
+}
+
+
+
