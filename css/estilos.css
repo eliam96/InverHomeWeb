@@ -1,91 +1,181 @@
-
 /* variables */
-:root{
-    --p-color:#095696;
+
+:root {
+    --p-color: #095696;
     --s-color: #EBB952;
     --t-color: #2684D1;
     --bg-color: #FFFFFF;
 }
 
 /* Estilos generales */
-*{
+
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-html{
-    font-size: 16px; /*16px=1rem */
+
+html {
+    font-size: 16px;
+    /*16px=1rem */
 }
-li{
-    list-style:none;
+
+li {
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 a{
-    text-decoration: none;
+    text-decoration:none;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+ul {
     margin: 0;
     padding: 0;
 }
-ul{
-    margin: 0;
-    padding: 0;
-}
+
 /* Fin */
+
+/* Clase especial */
+
+.clear {
+    margin-top: 8.125rem;
+}
+
+/* Clases comunes NOSOTROS - PROYECTOS HABITACIONALES*/
+
+.title-section {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--p-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-align {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-content {
+    width: 90%;
+    margin-top: 1.25rem;
+    display: flex;
+    margin-right: 0;
+    color: var(--bg-color);
+}
+
+.logo-section {
+    width: 30%;
+    padding: 20px;
+    /* border: 1px solid rgba(64, 72, 80, .6); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-section {
+    width: 70%;
+    background-color: var(--p-color);
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-text {
+    margin: 5px 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.description-text {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 250px;
+    height: 50px;
+    background-color: var(--s-color);
+    color: var(--bg-color);
+    border: 2px solid var(--bg-color);
+}
+
 /* Header y navegación */
-.header{
+
+.header {
     margin: 0.625rem auto;
     background-color: var(--bg-color);
     display: flex;
     justify-content: space-evenly;
     font-family: 'Montserrat', sans-serif;
     max-width: 90%;
-    height: 100px;  
+    height: 100px;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(236, 236, 236, 0.678);
 }
-.logo{
+
+.logo {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo img{
+
+.logo img {
     width: 9.375rem;
     height: auto;
 }
-.menu{
+
+.menu {
     display: flex;
     width: 80%;
     align-items: center;
 }
-.item-menu{
+
+.item-menu {
     padding: 0 2rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.item-menu a{
+
+.item-menu a {
     color: var(--p-color);
     font-size: 1rem;
-
 }
-.item-menu a::after{
+
+.item-menu a::after {
     display: block;
     content: "";
     background-color: var(--s-color);
     width: 0;
     height: 2px;
     transition: all .5s;
-
-}
-.menu a:hover{
-    color: var(--s-color); 
 }
 
-.menu a:hover::after{
+.menu a:hover {
+    color: var(--s-color);
+}
+
+.menu a:hover::after {
     width: 100%;
 }
 
 /* Sección portada principal */
-.intro{
+
+.intro {
     margin: 0 auto;
     background: url(../imgs/bghouse.jpg) center/cover no-repeat;
     width: 100%;
@@ -93,7 +183,7 @@ ul{
     position: relative;
 }
 
-.intro .tel{
+.intro .tel {
     align-items: center;
     /*                                       repet  position X Y          / size  W H*/
     /* background: url(../icons/icontel.svg) no-repeat 1.875rem 0.9375rem / 2.50rem 2.50rem; */
@@ -110,7 +200,7 @@ ul{
     width: 17rem;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,7 +216,7 @@ ul{
     left: 0.625rem;
 }
 
-.card__lema{
+.card__lema {
     font-size: 2.5rem;
     margin: 0;
     width: 100%;
@@ -136,15 +226,15 @@ ul{
     padding: 2.1875rem;
 }
 
-.card__lema::after{
+.card__lema::after {
     content: "";
     background: var(--bg-color);
-    display:block;
+    display: block;
     width: 100%;
     height: 0.1875rem;
-
 }
-.card__description{
+
+.card__description {
     margin: 0;
     background: var(--t-color);
     width: 100%;
@@ -152,17 +242,68 @@ ul{
     padding: 0.625rem 2.1875rem;
 }
 
+/* Sección Nosotros  Misión Visión*/
+
+.mission__vision {
+    background: url(../imgs/bg-main.jpg) center/cover no-repeat fixed;
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mv-content {
+    margin: 10px;
+    width: 25%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5625rem;
+    background-color: rgba(94, 90, 90, 0.4);
+}
+
+.mv-title, .mv-text {
+    color: var(--bg-color);
+    text-align: center;
+    padding: 5px;
+}
+
+.mv-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mv-title::after {
+    margin-top: 2px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--s-color);
+}
+
+.mv-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
 /* Social Bar */
-.socialbar{
+
+.socialbar {
+    display: none;
     position: fixed;
     background: var(--t-color);
     width: 3.125rem;
     height: 13.125rem;
     right: 0;
     bottom: 9.375rem;
-
 }
-.socialbar__icon{
+
+.socialbar__icon {
     width: 100%;
     height: 100%;
     display: flex;
@@ -170,7 +311,8 @@ ul{
     justify-content: space-around;
     align-items: center;
 }
-.socialbar__icon--social{
+
+.socialbar__icon--social {
     display: flex;
     justify-content: center;
     align-items: space-around;
@@ -179,8 +321,95 @@ ul{
     border-bottom: solid rgba(94, 90, 90, 0.678);
 }
 
-.socialbar__icon img{
+.socialbar__icon img {
     width: 2.5rem;
 }
 
+/* Nuestro Equipo Cards */
 
+/*Utilidades*/
+.contenedor-cards{
+    background: url(../imgs/bg-main.jpg) center/cover no-repeat fixed;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__cargo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+.profile__name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+}
+
+.email {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+}
+
+.tel__tel {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+}
+
+.contenedor-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-cards .profile {
+    margin-right: 1rem;
+    min-width: 250px;
+}
+
+.profile {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: url(https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.profile__datos {
+    line-height: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 40%;
+    background: rgba(9, 86, 150, .8);
+    bottom: -140px;
+    border-top: 2px #ffff solid;
+    transition: bottom 0.5s;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+}
+
+.profile:hover .profile__datos {
+    bottom: 0px;
+}
+
+.tel {
+    display: flex;
+    justify-content: center;
+}
+
+.tel__icon, .email__icon {
+    padding: 0 0.2rem 0 0;
+}
+
+
+.prueba{
+    height: 50vh;
+}
