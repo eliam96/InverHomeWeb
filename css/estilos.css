@@ -334,7 +334,7 @@ ul {
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 .bgmail{
-    background: #e94040 ;
+    background: #095696; 
 }
 
 /* Nuestro Equipo Cards */
@@ -352,24 +352,31 @@ ul {
 
 .profile__cargo {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile__cargo::after{
+    content: "";
+    display: flex;
+    background: var(--s-color);
+    width:0;
+    height: 2px;
+    margin-top: 3px;
+    transition: all .5s;
 }
 
-.profile__name {
+.profile__name,
+.profession__name,
+.email,
+.tel__tel{
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1rem;
+    padding-top: 1px;
 }
-
-.email {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1rem;
-}
-
-.tel__tel {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1rem;
-}
-
 .contenedor-cards {
     display: flex;
     justify-content: center;
@@ -379,12 +386,25 @@ ul {
     margin-right: 1rem;
     min-width: 250px;
 }
+.bg-gerente{
+    background: url(../imgs/gerente-inverhome.jpg);
+}
+
+.bg-subgerente{
+    background: url(../imgs/subgerente-inverhome.jpg);
+}
+.bg-direcingenieria{
+    background: url(../imgs/director-ingenieria-inverhome.jpeg);
+}
+.bg-direccompras{
+    background: url(../imgs/director-compraslegal-inverhome.jpg);
+}
 
 .profile {
+    border: 1px solid rgba(236, 236, 236, 0.678);
     position: relative;
     width: 250px;
     height: 350px;
-    background: url(https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
     background-size: cover;
     overflow: hidden;
 }
@@ -400,13 +420,15 @@ ul {
     width: 100%;
     height: 40%;
     background: rgba(9, 86, 150, .8);
-    bottom: -140px;
+    bottom: -100px;
     border-top: 2px var(--bg-color) solid;
     transition: bottom 0.5s;
 }
-
 .profile:hover .profile__datos {
     bottom: 0px;
+}
+.profile:hover .profile__cargo::after {
+    width: 70%;
 }
 
 .email {
