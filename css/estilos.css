@@ -25,13 +25,13 @@ li {
     margin: 0;
     padding: 0;
 }
-a{
-    text-decoration:none;
+
+a {
+    text-decoration: none;
     color: white;
     margin: 0;
     padding: 0;
-  }
-  
+}
 
 ul {
     margin: 0;
@@ -49,7 +49,7 @@ ul {
 /* Clases comunes NOSOTROS - PROYECTOS HABITACIONALES*/
 
 .title-section {
-    margin: 20px 0;
+    margin: 60px 0 20px 0;
     text-align: center;
     font-size: 2rem;
     font-weight: normal;
@@ -61,11 +61,12 @@ ul {
 .section-align {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    height: auto;
 }
 
 .section-content {
     width: 90%;
-    margin-top: 1.25rem;
     display: flex;
     margin-right: 0;
     color: var(--bg-color);
@@ -165,11 +166,7 @@ ul {
     transition: all .5s;
 }
 
-.menu a:hover {
-    color: var(--s-color);
-}
-
-.menu a:hover::after {
+.item-menu a:hover::after {
     width: 100%;
 }
 
@@ -268,7 +265,7 @@ ul {
 .mv-title, .mv-text {
     color: var(--bg-color);
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 .mv-title {
@@ -284,6 +281,7 @@ ul {
     width: 100%;
     height: 3px;
     background-color: var(--s-color);
+    transition: all .2s;
 }
 
 .mv-text {
@@ -294,11 +292,10 @@ ul {
 /* Social Bar */
 
 .socialbar {
-    display: none;
     position: fixed;
-    background: var(--t-color);
-    width: 3.125rem;
-    height: 13.125rem;
+    /* background: var(--s-color); */
+    width: 40px;
+    height: 200px;
     right: 0;
     bottom: 9.375rem;
 }
@@ -322,14 +319,31 @@ ul {
 }
 
 .socialbar__icon img {
-    width: 2.5rem;
+    width: 2rem;
+}
+
+.bgfacebook {
+    background: var(--p-color);
+}
+
+.bgwhatsapp {
+    background: #00e676;
+}
+
+.bginstagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.bgmail{
+    background: #e94040 ;
 }
 
 /* Nuestro Equipo Cards */
 
 /*Utilidades*/
-.contenedor-cards{
+
+.contenedor-cards {
     background: url(../imgs/bg-main.jpg) center/cover no-repeat fixed;
+    width: 100%;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -387,17 +401,17 @@ ul {
     height: 40%;
     background: rgba(9, 86, 150, .8);
     bottom: -140px;
-    border-top: 2px #ffff solid;
+    border-top: 2px var(--bg-color) solid;
     transition: bottom 0.5s;
+}
+
+.profile:hover .profile__datos {
+    bottom: 0px;
 }
 
 .email {
     display: flex;
     justify-content: center;
-}
-
-.profile:hover .profile__datos {
-    bottom: 0px;
 }
 
 .tel {
@@ -409,7 +423,65 @@ ul {
     padding: 0 0.2rem 0 0;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--p-color);
+    margin-top: 40px;
+    height: 200px;
+}
 
-.prueba{
-    height: 50vh;
+.menu__footer {
+    width: 50%;
+    padding-top: 50px;
+    font-size: 1.25rem;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__footer-item {
+    color: var(--bg-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu__footer-item a:after {
+    display: block;
+    content: "";
+    background-color: var(--s-color);
+    width: 0;
+    height: 2px;
+    transition: all .5s;
+}
+
+.menu__footer-item a:hover::after {
+    width: 100%;
+    color: var(--s-color);
+}
+
+.copy {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--s-color);
+    font-size: 1.25rem;
+}
+
+/* socialbar footer */
+
+.socialbarfooter {
+    color: rgba(94, 90, 90, 0.678);
+    margin-top: 10px;
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.socialbarfooter__icon img {
+    width: 1.5rem;
 }
