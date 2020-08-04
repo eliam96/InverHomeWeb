@@ -352,7 +352,7 @@ ul {
 
 .profile__cargo {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 1clearrem;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -470,20 +470,10 @@ footer {
     display: flex;
     justify-content: space-around;
 }
-
-.menu__footer-item a:after {
-    display: block;
-    content: "";
-    background-color: var(--s-color);
-    width: 0;
-    height: 2px;
-    transition: all .5s;
-}
-
-.menu__footer-item a:hover::after {
-    width: 100%;
+.menu__footer-item a:hover{
     color: var(--s-color);
 }
+
 
 .copy {
     margin-top: 10px;
@@ -491,7 +481,17 @@ footer {
     color: var(--s-color);
     font-size: 1.25rem;
 }
-
+.autor{
+     margin-top: 10px;
+    font-family: 'Roboto',sans-serif;
+    color: var(--s-color);
+    font-size: 0.875rem;
+    text-decoration: underline;
+}
+.autor a{
+    text-decoration: underline;
+    font-weight: lighters;
+}
 /* socialbar footer */
 
 .socialbarfooter {
